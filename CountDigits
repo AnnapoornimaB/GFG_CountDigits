@@ -1,0 +1,21 @@
+class Solution
+{
+    static int evenlyDivides(int N)
+    {
+        int c = 0;
+        String s = String.valueOf(N);
+        int[] a = new int[s.length()];
+        for(int i=0;i<s.length();i++)
+        {
+            a[i] = Integer.parseInt(String.valueOf(s.charAt(i)));
+        }
+        for(int i=0;i<a.length;i++)
+        {
+            if(a[i] != 0 && N % a[i] == 0)
+            {
+                c++;
+            }
+        }
+        return c;
+    }
+}
